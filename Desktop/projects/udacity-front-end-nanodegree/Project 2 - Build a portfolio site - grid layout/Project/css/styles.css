@@ -1,0 +1,158 @@
+/*General css*/
+
+html, body{
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+/*Grid declaration*/
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  grid-auto-rows: minmax(100px, auto);
+  max-width: 1024px;
+  margin: auto;
+}
+
+/*Header*/
+
+header {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+}
+
+.header-global-container{
+  display: flex;
+  justify-content:space-between;
+}
+
+.header-containerA{
+	align-items: center;
+	display: flex;
+  padding: 1rem;
+}
+
+.header-containerA img{
+	max-width: 50%;
+	border-radius: 50%;
+}
+
+.header-containerB{
+	color:#2d3c49;
+	text-align: right;
+	width: 100%;
+  padding: 1.5rem;
+}
+
+.header-containerB h1{
+	font-size: 3.5rem;
+	font-family: "Lucida Sans Unicode", sans-serif;
+  line-height: 1;
+}
+
+.header-containerB h2{
+	font-size: 2rem;
+	font-family: "Lucida Sans Unicode",sans-serif;
+  line-height: 1;
+}
+
+/*Middle window*/
+
+.central_window {
+  grid-column: 1 / 5;
+  grid-row: 2 / 4;
+}
+
+.central_window img{
+	max-width: 100%;
+  border-radius: 5px;
+}
+
+.central_window{
+	padding: 1rem;
+}
+/*Second Window*/
+
+.featured_title{
+  grid-column: 1 / 5;
+  grid-row: 4 / 5;
+  color: #7d97ad;
+  padding: 1rem;
+}
+
+.featured_work{
+  grid-column: 1 / 5;
+  grid-row: 5 / 6;
+  display: flex;
+  justify-content: space-around;
+}
+
+.projectA,
+.projectB,
+.projectC{
+	padding: 1rem;
+}
+
+.project_name a{
+  font-size: 2rem;
+  text-decoration: none;
+  text-align: center;
+  color: #2d3c49;
+}
+
+.featured_work p{
+  text-decoration: none;
+  text-align: center;
+  color: #2d3c49;
+  font-size: 1rem;
+}
+
+.projectA img,
+.projectB img,
+.projectC img{
+	max-width: 100%;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 870px ){
+  .header-containerB h1{
+    font-size: 2.9rem;
+  }
+
+  .header-containerB h2{
+    font-size: 2.5rem;
+  }
+
+  .featured_work{
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 710px ){
+  .header-containerB h1{
+    font-size: 2.5rem;
+  }
+
+  .header-containerB h2{
+    font-size: 2rem;
+  }
+
+}
+
+@media only screen and (max-width: 480px ){
+  .header-containerB h1{
+  	  font-size: 1.7rem;
+  }
+
+  .header-containerB h2{
+  	  font-size: 0.9rem;
+      line-height: normal;
+  }
+
+  .featured_work{
+    flex-wrap: wrap;
+  }
+}
